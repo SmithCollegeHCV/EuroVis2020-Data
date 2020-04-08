@@ -7,6 +7,10 @@ output:
   html_document: default
 ---
 
+This .Rmd contains the analysis and figure generation for:
+
+_Crouser, R. Jordan, Ottley, Alvitta, et al. "Investigating the Role of Locus of Control in Moderating Complex Analytic Workflows." 22nd Eurographics Conference on Visualization, 2020._
+
 ```{r include=FALSE}
 library(dplyr)
 library(ggplot2)
