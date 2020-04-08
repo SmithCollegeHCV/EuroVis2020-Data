@@ -19,7 +19,7 @@ library(scales)
 ## Import and preprocessing
 ```{r warning = F}
 # Interaction data from instrumented system and Google Docs autosave
-actions_full <- read.csv("data/eventlog_cleaned_transformed.csv") %>%
+actions_full <- read.csv("data/eventlog.csv") %>%
   mutate(Time = hms(Time))
 
 # Eliminate incomplete participants and those with data collection errors, 
@@ -42,7 +42,7 @@ labels = data.frame("D.ID" = c("VAST5KP", "VASTCER", "VASTF0B",
                                  "Participant 9"))
 
 # Data from qualtrics survey
-survey_full <- read.csv("data/qualtrics_data_wo_instrumentation.csv") %>%
+survey_full <- read.csv("data/survey.csv") %>%
  filter(D.ID %in% labels$D.ID) %>%
   left_join(labels)
 
